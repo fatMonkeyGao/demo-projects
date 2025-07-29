@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "npmClient": "pnpm",
+  "useWorkspaces": true,
+  "packages": [
+    "packages/*",
+    "apps/*",
+    "tools/*"
+  ],
+  "command": {
+    "publish": {
+      "conventionalCommits": true,
+      "message": "chore(release): publish"
+    }
+  }
+} 
