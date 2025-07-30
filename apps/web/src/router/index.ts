@@ -4,14 +4,19 @@ const router = createRouter({
   history: createWebHistory("/"),
   routes: [
     {
-      path: "/",
-      name: "home",
-      component: () => import("@/App.vue"),
-    },
-    {
       path: "/mastergo",
       name: "mastergo",
       component: () => import("@/views/MasterGoDemo.vue"),
+    },
+    {
+      path: "/components",
+      name: "components",
+      component: () => import("@/views/ComponentsDemo.vue"),
+    },
+    {
+      path: "/",
+      name: "home",
+      component: () => import("@/views/Main.vue"),
     },
   ],
 });

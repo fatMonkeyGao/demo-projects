@@ -8,22 +8,27 @@ export default defineConfig({
   plugins: [vue()],
   resolve: {
     alias: {
-      "@": resolve(__dirname, "src"),
       "@shared": resolve(__dirname, "../../packages/shared/src"),
-      "@components": resolve(__dirname, "../../packages/components/src"),
+    },
+  },
+  build: {
+    lib: {
+      entry: resolve(__dirname, "src/index.ts"),
+      name: "DemoComponents",
+      fileName: (format) => `index.${format === "es" ? "mjs" : "js"}`,
+    },
+    rollupOptions: {
+      external: ["vue"],
+      output: {
+        globals: {
+          vue: "Vue",
+        },
+      },
     },
   },
   css: {
     postcss: {
       plugins: [tailwindcss, autoprefixer],
     },
-  },
-  server: {
-    port: 3000,
-    open: true,
-  },
-  build: {
-    outDir: "dist",
-    sourcemap: true,
   },
 });

@@ -26,6 +26,9 @@
             ],
             "@shared/*": [
                 "./packages/shared/src"
+            ],
+            "@components/*": [
+                "./packages/components/src"
             ]
         }
     },

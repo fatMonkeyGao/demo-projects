@@ -27,6 +27,9 @@
             ],
             "@/*": [
                 "src/*"
+            ],
+            "@components": [
+                "../../packages/components/src"
             ]
         }
     },

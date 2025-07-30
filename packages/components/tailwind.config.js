@@ -2,7 +2,6 @@
 export default {
   ...require('../../tailwind.config.js'),
   content: [
-    "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
 } 
