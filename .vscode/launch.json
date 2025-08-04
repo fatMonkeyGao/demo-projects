@@ -1,0 +1,79 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "调试 Node.js 服务器 (tsx)",
+            "cwd": "${workspaceFolder}/apps/node",
+            "runtimeExecutable": "npx",
+            "runtimeArgs": [
+                "tsx",
+                "src/server.ts"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "sourceMaps": true,
+            "resolveSourceMapLocations": [
+                "${workspaceFolder}/**",
+                "!**/node_modules/**"
+            ],
+            "skipFiles": [
+                "<node_internals>/**",
+                "**/node_modules/**"
+            ],
+            "console": "integratedTerminal",
+            "restart": true,
+            "killBehavior": "polite"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "调试 Node.js 服务器 (监听模式)",
+            "cwd": "${workspaceFolder}/apps/node",
+            "runtimeExecutable": "npx",
+            "runtimeArgs": [
+                "tsx",
+                "watch",
+                "src/server.ts"
+            ],
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "sourceMaps": true,
+            "resolveSourceMapLocations": [
+                "${workspaceFolder}/**",
+                "!**/node_modules/**"
+            ],
+            "skipFiles": [
+                "<node_internals>/**",
+                "**/node_modules/**"
+            ],
+            "console": "integratedTerminal",
+            "restart": true,
+            "killBehavior": "polite"
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "附加到正在运行的服务器",
+            "port": 9229,
+            "restart": true,
+            "localRoot": "${workspaceFolder}/apps/node",
+            "remoteRoot": "${workspaceFolder}/apps/node",
+            "sourceMaps": true,
+            "resolveSourceMapLocations": [
+                "${workspaceFolder}/**",
+                "!**/node_modules/**"
+            ],
+            "skipFiles": [
+                "<node_internals>/**",
+                "**/node_modules/**"
+            ]
+        }
+    ]
+}
