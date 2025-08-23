@@ -1,0 +1,337 @@
+{
+  "dsl": {
+    "styles": {
+      "paint_2:3": {
+        "value": ["#FFFFFF"]
+      },
+      "paint_2:2391": {
+        "value": ["#FFFFFF"]
+      },
+      "paint_2:2259": {
+        "value": ["rgba(5, 193, 174, 0.1)"]
+      },
+      "paint_2:2273": {
+        "value": ["#05C1AE"]
+      },
+      "font_2:2271": {
+        "value": {
+          "family": "Source Han Sans",
+          "size": 14,
+          "style": "{\"fontStyle\":\"Regular\",\"opsz\":\"auto\"}",
+          "decoration": "none",
+          "case": "none",
+          "lineHeight": "14",
+          "letterSpacing": "auto"
+        }
+      },
+      "paint_2:2264": {
+        "value": ["#05C1AE"]
+      },
+      "effect_2:2278": {
+        "value": []
+      },
+      "paint_2:2325": {
+        "value": ["#595959"]
+      },
+      "font_2:2286": {
+        "value": {
+          "family": "SourceHanSansCN",
+          "size": 14,
+          "style": "{\"fontStyle\":\"Regular\",\"opsz\":\"auto\"}",
+          "decoration": "none",
+          "case": "none",
+          "lineHeight": "auto",
+          "letterSpacing": "auto"
+        }
+      },
+      "font_2:2365": {
+        "value": {
+          "family": "Source Han Sans",
+          "size": 14,
+          "style": "Normal",
+          "decoration": "none",
+          "case": "none",
+          "lineHeight": "-1",
+          "letterSpacing": "auto"
+        }
+      },
+      "paint_2:2475": {
+        "value": ["#262626"]
+      },
+      "paint_2:2614": {
+        "value": ["#05C1AE"],
+        "token": "主题色/--color-primary"
+      },
+      "font_2:2584": {
+        "value": {
+          "family": "PingFang SC",
+          "size": 14,
+          "style": "Regular",
+          "decoration": "none",
+          "case": "none",
+          "lineHeight": "22",
+          "letterSpacing": "auto"
+        }
+      },
+      "paint_2:2333": {
+        "value": ["#262626"]
+      },
+      "paint_2:4440": {
+        "value": ["#8C8C8C"]
+      },
+      "font_2:2303": {
+        "value": {
+          "family": "Source Han Sans",
+          "size": 14,
+          "style": "Normal",
+          "decoration": "none",
+          "case": "none",
+          "lineHeight": "-1",
+          "letterSpacing": "auto"
+        }
+      },
+      "paint_2:2297": {
+        "value": ["rgba(255, 255, 255, 0.01)"]
+      },
+      "font_2:2309": {
+        "value": {
+          "family": "Source Han Sans",
+          "size": 14,
+          "style": "Normal",
+          "decoration": "none",
+          "case": "none",
+          "lineHeight": "32",
+          "letterSpacing": "auto"
+        }
+      }
+    },
+    "nodes": [
+      {
+        "type": "FRAME",
+        "id": "2:0",
+        "name": "容器 1",
+        "layoutStyle": {
+          "width": 1616,
+          "height": 464,
+          "relativeX": 0,
+          "relativeY": 0
+        },
+        "fill": "paint_2:3",
+        "children": [
+          {
+            "type": "GROUP",
+            "id": "2:00651",
+            "name": "组 43376",
+            "layoutStyle": {
+              "width": 1200,
+              "height": 208,
+              "relativeX": 194,
+              "relativeY": 151
+            },
+            "children": [
+              {
+                "type": "GROUP",
+                "id": "2:2257",
+                "name": "组 43173",
+                "layoutStyle": {
+                  "width": 64,
+                  "height": 32,
+                  "relativeX": 1136,
+                  "relativeY": 176
+                },
+                "children": [
+                  {
+                    "type": "PATH",
+                    "id": "2:2258",
+                    "name": "矩形 376",
+                    "layoutStyle": {
+                      "width": 64,
+                      "height": 32
+                    },
+                    "path": [
+                      {
+                        "fill": "paint_2:2259",
+                        "data": "M0 32L52 32C58.6274 32 64 26.6274 64 20L64 0L12 0C5.37258 0 0 5.37258 0 12L0 32Z"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "GROUP",
+                    "id": "2:2261",
+                    "name": "组 43172",
+                    "layoutStyle": {
+                      "width": 48,
+                      "height": 16,
+                      "relativeX": 8,
+                      "relativeY": 8
+                    },
+                    "children": [
+                      {
+                        "type": "TEXT",
+                        "id": "2:2268",
+                        "name": "收起",
+                        "layoutStyle": {
+                          "width": 28,
+                          "height": 14,
+                          "relativeY": 1
+                        },
+                        "text": [
+                          {
+                            "text": "收起",
+                            "font": "font_2:2271"
+                          }
+                        ],
+                        "textColor": [
+                          {
+                            "start": 0,
+                            "end": 2,
+                            "color": "paint_2:2273"
+                          }
+                        ],
+                        "textAlign": "left",
+                        "textMode": "single-line"
+                      },
+                      {
+                        "type": "GROUP",
+                        "id": "2:2262",
+                        "name": "组 43171",
+                        "layoutStyle": {
+                          "width": 16,
+                          "height": 16,
+                          "relativeX": 32
+                        },
+                        "children": [
+                          {
+                            "type": "LAYER",
+                            "id": "2:2266",
+                            "name": "矩形 12353",
+                            "layoutStyle": {
+                              "width": 16,
+                              "height": 16
+                            }
+                          },
+                          {
+                            "type": "PATH",
+                            "id": "2:2263",
+                            "name": "路径",
+                            "layoutStyle": {
+                              "width": 6.135596752166748,
+                              "height": 11.375,
+                              "relativeX": 2,
+                              "relativeY": 11,
+                              "rotate": -90
+                            },
+                            "path": [
+                              {
+                                "fill": "paint_2:2264",
+                                "data": "M0.438257 11.375C0.30678 11.375 0.219128 11.3313 0.131477 11.2437C-0.0438257 11.0688 -0.0438257 10.8062 0.131477 10.6313L5.08378 5.6875L0.131477 0.74375C-0.0438257 0.56875 -0.0438257 0.30625 0.131477 0.13125C0.30678 -0.04375 0.569734 -0.04375 0.745037 0.13125L6.00412 5.38125C6.09177 5.46875 6.1356 5.55625 6.1356 5.6875C6.1356 5.81875 6.09177 5.90625 6.00412 5.99375L0.745037 11.2437C0.657385 11.3313 0.569734 11.375 0.438257 11.375L0.438257 11.375Z"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "GROUP",
+                "id": "2:2468",
+                "name": "组 43143",
+                "layoutStyle": {
+                  "width": 738,
+                  "height": 32,
+                  "relativeX": 20,
+                  "relativeY": 160
+                },
+                "children": [
+                  {
+                    "type": "TEXT",
+                    "id": "2:2530",
+                    "name": "学科：",
+                    "layoutStyle": {
+                      "width": 42,
+                      "height": 20,
+                      "relativeY": 6
+                    },
+                    "effect": "effect_2:2278",
+                    "text": [
+                      {
+                        "text": "学科：",
+                        "font": "font_2:2286"
+                      }
+                    ],
+                    "textColor": [
+                      {
+                        "start": 0,
+                        "end": 3,
+                        "color": "paint_2:2325"
+                      }
+                    ],
+                    "textAlign": "left",
+                    "textMode": "single-line"
+                  },
+                  {
+                    "type": "LAYER",
+                    "id": "2:2469",
+                    "name": "矩形",
+                    "layoutStyle": {
+                      "width": 80,
+                      "height": 32,
+                      "relativeX": 46
+                    },
+                    "borderRadius": "4px",
+                    "fill": "paint_2:2259",
+                    "strokeColor": "paint_2:2273",
+                    "strokeType": "dashed",
+                    "strokeAlign": "outside",
+                    "strokeWidth": "1px"
+                  },
+                  {
+                    "type": "TEXT",
+                    "id": "2:2526",
+                    "name": "总体学情",
+                    "layoutStyle": {
+                      "width": 56,
+                      "height": 20,
+                      "relativeX": 58,
+                      "relativeY": 6
+                    },
+                    "text": [
+                      {
+                        "text": "总体学情",
+                        "font": "font_2:2365"
+                      }
+                    ],
+                    "textColor": [
+                      {
+                        "start": 0,
+                        "end": 4,
+                        "color": "paint_2:2273"
+                      }
+                    ],
+                    "textAlign": "center",
+                    "textMode": "single-line"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "components": []
+  },
+  "componentDocumentLinks": [],
+  "rules": [
+    "token filed must be generated as a variable (colors, shadows, fonts, etc.) and the token field must be displayed in the comment",
+    "\n            componentDocumentLinks is a list of frontend component documentation links used in the DSL layer, designed to help you understand how to use the components.\n            When it exists and is not empty, you need to use mcp__getComponentLink in a for loop to get the URL content of all components in the list, understand how to use the components, and generate code using the components.\n            For example: \n              ```js  \n                const componentDocumentLinks = [\n                  'https://example.com/ant/button.mdx',\n                  'https://example.com/ant/button.mdx'\n                ]\n                for (const url of componentDocumentLinks) {\n                  const componentLink = await mcp__getComponentLink(url);\n                  console.log(componentLink);\n                }\n              ```\n          "
+  ],
+  "metadata": {
+    "fileId": "167719111140796",
+    "layerId": "2:0",
+    "url": "https://mastergo.iflytek.com/file/167719111140796?page_id=M&devMode=true",
+    "extractedAt": "2024-12-19",
+    "description": "MasterGo 过滤器组件设计文件的 DSL 数据，包含年级、班级、考试、学科筛选等UI组件的样式和结构信息"
+  }
+}

@@ -14,6 +14,16 @@ const router = createRouter({
       component: () => import("@/views/ComponentsDemo.vue"),
     },
     {
+      path: "/filter-headers",
+      name: "filter-headers",
+      component: () => import("@/views/FilterHeaders.vue"),
+    },
+    {
+      path: "/filter-headers2",
+      name: "filter-headers2",
+      component: () => import("@/views/FilterHeaders2.vue"),
+    },
+    {
       path: "/",
       name: "home",
       component: () => import("@/views/Main.vue"),

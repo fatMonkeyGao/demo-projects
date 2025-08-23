@@ -1,0 +1,275 @@
+{
+  "overallLayout": {
+    "isResponsive": true,
+    "mainDirection": "垂直"
+  },
+  "modules": [
+    {
+      "moduleName": "年级筛选模块",
+      "position": "页面顶部，紧接上方内容（若有）下方",
+      "size": {
+        "width": "100%",
+        "height": "随内容变化"
+      },
+      "margin": {
+        "top": 16,
+        "right": 16,
+        "bottom": 16,
+        "left": 16
+      },
+      "padding": {
+        "top": 8,
+        "right": 8,
+        "bottom": 8,
+        "left": 8
+      },
+      "innerElements": [
+        {
+          "elementType": "标签",
+          "elementName": "年级标签",
+          "content": "年级：",
+          "marginRight": 8
+        },
+        {
+          "elementType": "筛选按钮",
+          "elementName": "高三年級筛选按钮",
+          "content": "高三年级",
+          "marginRight": 16
+        }
+      ],
+      "styleFeatures": {
+        "backgroundColor": "#F5F7FA",
+        "borderRadius": "4px",
+        "border": "1px solid #E4E7ED"
+      },
+      "logicRole": "信息筛选"
+    },
+    {
+      "moduleName": "考试筛选模块",
+      "position": "年级筛选模块下方",
+      "size": {
+        "width": "100%",
+        "height": "随内容变化"
+      },
+      "margin": {
+        "top": 0,
+        "right": 16,
+        "bottom": 16,
+        "left": 16
+      },
+      "padding": {
+        "top": 8,
+        "right": 8,
+        "bottom": 8,
+        "left": 8
+      },
+      "innerElements": [
+        {
+          "elementType": "标签",
+          "elementName": "考试标签",
+          "content": "考试：",
+          "marginRight": 8
+        },
+        {
+          "elementType": "筛选按钮",
+          "elementName": "2025 年度上学期... 筛选按钮",
+          "content": "2025 年度上学期...",
+          "marginRight": 8,
+          "isClosable": true
+        },
+        {
+          "elementType": "筛选按钮",
+          "elementName": "高三期末第二次... 筛选按钮",
+          "content": "高三期末第二次...",
+          "marginRight": 8,
+          "isClosable": true
+        },
+        {
+          "elementType": "筛选按钮",
+          "elementName": "高三期末第一次... 筛选按钮",
+          "content": "高三期末第一次...",
+          "marginRight": 8,
+          "isClosable": true
+        },
+        {
+          "elementType": "操作按钮",
+          "elementName": "清空筛选按钮",
+          "content": "清空",
+          "marginRight": 8
+        },
+        {
+          "elementType": "操作按钮",
+          "elementName": "筛选考试按钮",
+          "content": "筛选考试",
+          "marginRight": 8
+        }
+      ],
+      "styleFeatures": {
+        "backgroundColor": "#F5F7FA",
+        "borderRadius": "4px",
+        "border": "1px solid #E4E7ED"
+      },
+      "logicRole": "信息筛选"
+    },
+    {
+      "moduleName": "班级筛选模块",
+      "position": "考试筛选模块下方",
+      "size": {
+        "width": "100%",
+        "height": "随内容变化"
+      },
+      "margin": {
+        "top": 0,
+        "right": 16,
+        "bottom": 16,
+        "left": 16
+      },
+      "padding": {
+        "top": 8,
+        "right": 8,
+        "bottom": 8,
+        "left": 8
+      },
+      "innerElements": [
+        {
+          "elementType": "标签",
+          "elementName": "班级标签",
+          "content": "班级：",
+          "marginRight": 8
+        },
+        {
+          "elementType": "筛选按钮",
+          "elementName": "全部班级按钮",
+          "content": "全部",
+          "marginRight": 8
+        },
+        {
+          "elementType": "筛选按钮",
+          "elementName": "高三年级 1 班按钮",
+          "content": "高三年级 1 班",
+          "marginRight": 8
+        }
+      ],
+      "styleFeatures": {
+        "backgroundColor": "#F5F7FA",
+        "borderRadius": "4px",
+        "border": "1px solid #E4E7ED"
+      },
+      "logicRole": "信息筛选"
+    },
+    {
+      "moduleName": "学科筛选模块",
+      "position": "班级筛选模块下方",
+      "size": {
+        "width": "100%",
+        "height": "随内容变化"
+      },
+      "margin": {
+        "top": 0,
+        "right": 16,
+        "bottom": 16,
+        "left": 16
+      },
+      "padding": {
+        "top": 8,
+        "right": 8,
+        "bottom": 8,
+        "left": 8
+      },
+      "innerElements": [
+        {
+          "elementType": "标签",
+          "elementName": "学科标签",
+          "content": "学科：",
+          "marginRight": 8
+        },
+        {
+          "elementType": "筛选按钮",
+          "elementName": "总分按钮",
+          "content": "总分",
+          "marginRight": 8
+        },
+        {
+          "elementType": "筛选按钮",
+          "elementName": "语文按钮",
+          "content": "语文",
+          "marginRight": 8
+        },
+        {
+          "elementType": "筛选按钮",
+          "elementName": "数学按钮",
+          "content": "数学",
+          "marginRight": 8
+        },
+        {
+          "elementType": "筛选按钮",
+          "elementName": "英语按钮",
+          "content": "英语",
+          "marginRight": 8
+        },
+        {
+          "elementType": "筛选按钮",
+          "elementName": "历史按钮",
+          "content": "历史",
+          "marginRight": 8
+        },
+        {
+          "elementType": "筛选按钮",
+          "elementName": "地理按钮",
+          "content": "地理",
+          "marginRight": 8
+        },
+        {
+          "elementType": "筛选按钮",
+          "elementName": "政治按钮",
+          "content": "政治",
+          "marginRight": 8
+        }
+      ],
+      "styleFeatures": {
+        "backgroundColor": "#F5F7FA",
+        "borderRadius": "4px",
+        "border": "1px solid #E4E7ED"
+      },
+      "logicRole": "信息筛选"
+    },
+    {
+      "moduleName": "收起按钮模块",
+      "position": "页面右下角",
+      "size": {
+        "width": "随内容变化",
+        "height": "随内容变化"
+      },
+      "margin": {
+        "top": "约 16px（视觉估算）",
+        "right": "约 16px（视觉估算）",
+        "bottom": "约 16px（视觉估算）",
+        "left": "auto"
+      },
+      "padding": {
+        "top": 4,
+        "right": 8,
+        "bottom": 4,
+        "left": 8
+      },
+      "innerElements": [
+        {
+          "elementType": "操作按钮",
+          "elementName": "收起按钮",
+          "content": "收起"
+        },
+        {
+          "elementType": "图标",
+          "elementName": "向上箭头图标",
+          "marginLeft": 4
+        }
+      ],
+      "styleFeatures": {
+        "backgroundColor": "#EBF5FF",
+        "borderRadius": "20px",
+        "color": "#1890FF"
+      },
+      "logicRole": "交互操作"
+    }
+  ]
+}
