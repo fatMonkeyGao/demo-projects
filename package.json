@@ -12,6 +12,7 @@
     "type-check": "pnpm -r type-check",
     "build:components": "pnpm --filter @demo/components build",
     "dev:web": "pnpm --filter @demo/web dev",
+    "dev:node": "pnpm --filter @demo/node dev",
     "validate-config": "node scripts/validate-config.js"
   },
   "devDependencies": {

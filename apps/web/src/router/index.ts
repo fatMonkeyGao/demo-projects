@@ -4,6 +4,11 @@ const router = createRouter({
   history: createWebHistory("/"),
   routes: [
     {
+      path: "/agent-chat",
+      name: "agent-chat",
+      component: () => import("@/views/AgentChat.vue"),
+    },
+    {
       path: "/mastergo",
       name: "mastergo",
       component: () => import("@/views/MasterGoDemo.vue"),

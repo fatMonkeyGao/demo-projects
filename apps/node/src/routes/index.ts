@@ -2,6 +2,7 @@ import Router from "@koa/router";
 import { AppController } from "../controllers";
 import userRoutes from "./user.routes";
 import agentRoutes from "./agent.routes";
+import chatRoutes from "./chat.routes";
 import { config } from "../config";
 
 // 创建主路由
@@ -17,6 +18,7 @@ const apiRouter = new Router({ prefix: config.apiPrefix });
 // 注册子路由
 apiRouter.use(userRoutes.routes(), userRoutes.allowedMethods());
 apiRouter.use(agentRoutes.routes(), agentRoutes.allowedMethods());
+apiRouter.use(chatRoutes.routes(), chatRoutes.allowedMethods());
 
 // 将 API 路由添加到主路由
 router.use(apiRouter.routes(), apiRouter.allowedMethods());
