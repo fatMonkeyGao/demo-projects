@@ -12,6 +12,7 @@
     </div>
     <div class="output">
       <div>{{ content }}</div>
+      <img class="w-1/2" :src="content" />
     </div>
   </div>
 </template>
@@ -22,24 +23,19 @@ const question = ref("");
 const content = ref("");
 const handleClick = async () => {
   content.value = "";
-  // const eventSource = new EventSource(
-  //   `http://localhost:3001/api/chat/agent?question=${question.value}`
-  // );
-  // eventSource.addEventListener("message", function (e: any) {
-  //   content.value += e.data;
-  // });
-  // eventSource.addEventListener("end", () => {
-  //   eventSource.close();
-  // });
-  const response = await fetch("http://localhost:3001/api/chat/agent", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      input: question.value,
-    }),
-  });
+
+  const response = await fetch(
+    "http://localhost:3001/api/photos/generatePhoto",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        input: question.value,
+      }),
+    }
+  );
 
   const reader = response.body?.getReader();
   const decoder = new TextDecoder();
@@ -64,8 +60,9 @@ const handleClick = async () => {
       }
       try {
         const data = JSON.parse(incoming);
-        const delta = data.choices[0].delta.content;
-        if (delta) content.value += delta;
+        if (data.type === "image_generation.partial_succeeded") {
+          content.value = data.url;
+        }
       } catch {
         buffer += `data: ${incoming}`;
       }

@@ -1,11 +1,11 @@
 import https from "https";
 import { URL } from "url";
 
-class ChatService {
-  async agentChat(input: string): Promise<NodeJS.ReadableStream> {
+class PhotoService {
+  async generatePhoto(input: string): Promise<NodeJS.ReadableStream> {
     return new Promise((resolve, reject) => {
       const url = new URL(
-        "https://ark.cn-beijing.volces.com/api/v3/chat/completions"
+        "https://ark.cn-beijing.volces.com/api/v3/images/generations"
       );
 
       // 请求配置
@@ -17,15 +17,17 @@ class ChatService {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${process.env.ARK_API_KEY}`,
-          Accept: "text/event-stream", // 声明接收流式响应
         },
       };
 
       // 构建请求体
       const requestBody = JSON.stringify({
         stream: true,
-        model: "doubao-seed-1-6-251015",
-        messages: [{ role: "user", content: `${input}` }],
+        model: "doubao-seedream-4-0-250828",
+        prompt: input,
+        response_format: "url",
+        size: "2K",
+        watermark: false,
       });
 
       const req = https.request(options, (response) => {
@@ -52,4 +54,4 @@ class ChatService {
   }
 }
 
-export const chatService = new ChatService();
+export const photoService = new PhotoService();

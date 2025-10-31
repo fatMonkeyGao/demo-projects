@@ -1,8 +1,8 @@
-import { chatService } from "src/services/chat.service";
+import { photoService } from "src/services/photo.service";
 import { AppContext } from "src/types";
 
-export class ChatController {
-  static async agentChat(ctx: AppContext): Promise<void> {
+export class PhotoController {
+  static async generatePhoto(ctx: AppContext): Promise<void> {
     const { input } = ctx.request.body as { input: string };
 
     // 设置流式响应头
@@ -13,7 +13,7 @@ export class ChatController {
 
     try {
       // 获取流式响应
-      const stream = await chatService.agentChat(input);
+      const stream = await photoService.generatePhoto(input);
 
       // 将响应流直接传递给客户端
       ctx.body = stream;

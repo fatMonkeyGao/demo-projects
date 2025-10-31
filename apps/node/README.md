@@ -52,10 +52,12 @@ pnpm install
 1. 复制环境变量文件：
 
 ```bash
-cp .env.example .env
+cp .env.example .env.local
 ```
 
-2. 编辑 `.env` 文件，配置相关参数。
+2. 编辑 `.env.local` 文件，配置相关参数。
+
+> **注意**: 本项目使用 `.env.local` 作为本地环境变量文件（已添加到 .gitignore），可以安全地存储敏感信息。
 
 ### 启动开发服务
 
@@ -127,14 +129,17 @@ pnpm start
 
 ## 🔧 环境变量
 
-| 变量名        | 描述          | 默认值              |
-| ------------- | ------------- | ------------------- |
-| PORT          | 服务端口      | 3001                |
-| NODE_ENV      | 运行环境      | development         |
-| API_PREFIX    | API 前缀      | /api                |
-| COZE_TOKEN    | Coze AI Token | -                   |
-| COZE_BASE_URL | Coze API 地址 | https://api.coze.cn |
-| FIRE_API_KEY  | Fire AI 密钥  | -                   |
+| 变量名        | 描述           | 默认值              |
+| ------------- | -------------- | ------------------- |
+| PORT          | 服务端口       | 3001                |
+| NODE_ENV      | 运行环境       | development         |
+| API_PREFIX    | API 前缀       | /api                |
+| ARK_API_KEY   | ARK API 密钥   | -                   |
+| COZE_TOKEN    | Coze AI Token  | -                   |
+| COZE_BASE_URL | Coze API 地址  | https://api.coze.cn |
+| FIRE_API_KEY  | Fire AI 密钥   | -                   |
+
+> **环境变量加载顺序**: 系统环境变量 > `.env.local` > `.env`
 
 ## 📊 项目特性
 

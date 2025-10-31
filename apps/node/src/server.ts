@@ -1,6 +1,12 @@
+import dotenv from "dotenv";
+import { pathToFileURL } from "url";
 import { createApp } from "./app";
 import { config, isDevelopment } from "./config";
-import { pathToFileURL } from "url";
+
+// 加载环境变量文件
+// 先加载 .env，再加载 .env.local（.env.local 会覆盖 .env 中的同名变量）
+dotenv.config();
+dotenv.config({ path: ".env.local" });
 
 /**
  * 启动服务器

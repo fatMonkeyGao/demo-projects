@@ -9,6 +9,11 @@ const router = createRouter({
       component: () => import("@/views/AgentChat.vue"),
     },
     {
+      path: "/photo-generate",
+      name: "photo-generate",
+      component: () => import("@/views/PhotoGenerate.vue"),
+    },
+    {
       path: "/mastergo",
       name: "mastergo",
       component: () => import("@/views/MasterGoDemo.vue"),
