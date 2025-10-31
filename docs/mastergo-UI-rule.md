@@ -23,3 +23,5 @@
 5. 输出格式
     * 仅返回完整的 Vue 单文件组件代码（.vue 文件内容）
     * 代码需包含完整的<template>、<script setup lang="ts">和<style>标签<style>标签内仅需添加@apply或基础样式引入，禁止复杂样式逻辑
+6. 组件映射
+    * 将 name 为 button-1 生成为 button-1 组件，引用地址为 @/components/Button.vue

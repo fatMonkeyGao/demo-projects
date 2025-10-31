@@ -13,6 +13,12 @@
             >
               组件库演示
             </router-link>
+            <router-link
+              to="/filter-selector"
+              class="text-sm text-blue-600 hover:text-blue-800"
+            >
+              筛选器组件
+            </router-link>
             <span class="text-sm text-gray-500">
               {{ formatDate(new Date()) }}
             </span>

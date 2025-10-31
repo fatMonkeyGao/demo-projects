@@ -29,6 +29,11 @@ const router = createRouter({
       component: () => import("@/views/FilterHeaders2.vue"),
     },
     {
+      path: "/filter-selector",
+      name: "filter-selector",
+      component: () => import("@/views/FilterSelector.vue"),
+    },
+    {
       path: "/",
       name: "home",
       component: () => import("@/views/Main.vue"),
