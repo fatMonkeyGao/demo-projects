@@ -10,6 +10,7 @@ import {
   requestLogger,
   responseTime,
 } from "./middleware";
+import { createSessionMiddleware } from "./middleware/session.middleware";
 import { isDevelopment } from "./config";
 
 /**
@@ -17,6 +18,14 @@ import { isDevelopment } from "./config";
  */
 export const createApp = (): Koa => {
   const app = new Koa();
+
+  // 设置 session 签名密钥（用于签名 cookie）
+  // 在生产环境中，应该使用环境变量提供安全的密钥
+  app.keys = [process.env.SESSION_SECRET || "demo-session-secret-key-change-in-production"];
+
+  // Session 中间件（需要在 CORS 之前配置，因为需要设置 cookie）
+  // 注意：session 中间件需要 app 实例作为参数
+  app.use(createSessionMiddleware(app));
 
   // 安全中间件
   app.use(helmet());
