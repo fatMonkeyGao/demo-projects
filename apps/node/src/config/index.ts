@@ -49,6 +49,15 @@ export interface RemoteUserServiceConfig {
   group?: string;
 }
 
+export interface LangChainConfig {
+  apiKey: string;
+  baseURL?: string;
+  model?: string;
+  temperature?: number;
+  maxTokens?: number;
+  streaming?: boolean;
+}
+
 // 延迟初始化配置对象，确保在访问时才读取 process.env
 // 这样可以确保 dotenv 已经加载完成
 
@@ -100,6 +109,19 @@ const getRemoteUserServiceConfig = (): RemoteUserServiceConfig => ({
   group: process.env.REMOTE_USER_SERVICE_GROUP || "",
 });
 
+const getLangChainConfig = (): LangChainConfig => ({
+  apiKey: process.env.LANGCHAIN_API_KEY || process.env.OPENAI_API_KEY || "",
+  baseURL: process.env.LANGCHAIN_BASE_URL || process.env.OPENAI_BASE_URL,
+  model: process.env.LANGCHAIN_MODEL || "gpt-3.5-turbo",
+  temperature: process.env.LANGCHAIN_TEMPERATURE
+    ? Number(process.env.LANGCHAIN_TEMPERATURE)
+    : 0.7,
+  maxTokens: process.env.LANGCHAIN_MAX_TOKENS
+    ? Number(process.env.LANGCHAIN_MAX_TOKENS)
+    : undefined,
+  streaming: process.env.LANGCHAIN_STREAMING === "true",
+});
+
 // 使用 Proxy 实现延迟初始化，保持原有的 API 接口
 // 支持普通的属性访问以及 Object.keys()、Object.entries() 等方法
 const createConfigProxy = <T extends object>(getConfigFn: () => T): T => {
@@ -134,6 +156,7 @@ export const dubboConfig = createConfigProxy(getDubboConfig);
 export const remoteUserServiceConfig = createConfigProxy(
   getRemoteUserServiceConfig
 );
+export const langchainConfig = createConfigProxy(getLangChainConfig);
 
 // 导出环境判断工具函数
 export const isDevelopment = () => getConfig().nodeEnv === "development";

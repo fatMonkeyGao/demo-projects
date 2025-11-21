@@ -102,6 +102,12 @@ importers:
       '@koa/router':
         specifier: ^12.0.1
         version: 12.0.2
+      '@langchain/core':
+        specifier: ^0.3.0
+        version: 0.3.66(openai@5.10.2(ws@8.18.3)(zod@3.25.76))
+      '@langchain/openai':
+        specifier: ^0.3.0
+        version: 0.3.17(@langchain/core@0.3.66(openai@5.10.2(ws@8.18.3)(zod@3.25.76)))(encoding@0.1.13)(ws@8.18.3)
       dotenv:
         specifier: ^17.2.3
         version: 17.2.3
@@ -122,7 +128,7 @@ importers:
         version: 7.0.2
       langchain:
         specifier: ^0.3.30
-        version: 0.3.30(@langchain/core@0.3.66(openai@5.10.2(ws@8.18.3)(zod@3.25.76)))(axios@1.11.0)(handlebars@4.7.8)(openai@5.10.2(ws@8.18.3)(zod@3.25.76))(ws@8.18.3)
+        version: 0.3.30(@langchain/core@0.3.66(openai@5.10.2(ws@8.18.3)(zod@3.25.76)))(axios@1.11.0)(encoding@0.1.13)(handlebars@4.7.8)(openai@5.10.2(ws@8.18.3)(zod@3.25.76))(ws@8.18.3)
       node-zookeeper-client:
         specifier: ^1.1.2
         version: 1.1.3
@@ -172,6 +178,9 @@ importers:
       element-plus:
         specifier: ^2.10.5
         version: 2.10.5(vue@3.5.18(typescript@5.8.3))
+      html2canvas:
+        specifier: ^1.4.1
+        version: 1.4.1
       vue:
         specifier: ^3.4.0
         version: 3.5.18(typescript@5.8.3)
@@ -725,11 +734,11 @@ packages:
     resolution: {integrity: sha512-d3SgSDOlgOjdIbReIXVQl9HaQzKqO/5+E+o3kJwoKXLGP9dxi7+lMyaII7yv7G8/aUxMWLwFES9zc1jFoeJEZw==, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/@langchain/core/-/core-0.3.66.tgz}
     engines: {node: '>=18'}
 
-  '@langchain/openai@0.6.3':
-    resolution: {integrity: sha512-dSNuXDTJitDzN8D2wFNqWVELDbBRhMpJiFeiWpHjfPuq7R6wSjzNNY/Uk6x+FLpvbOs/zKNWy5+0q0p3KrCjRQ==}
+  '@langchain/openai@0.3.17':
+    resolution: {integrity: sha512-uw4po32OKptVjq+CYHrumgbfh4NuD7LqyE+ZgqY9I/LrLc6bHLMc+sisHmI17vgek0K/yqtarI0alPJbzrwyag==, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/@langchain/openai/-/openai-0.3.17.tgz}
     engines: {node: '>=18'}
     peerDependencies:
-      '@langchain/core': '>=0.3.58 <0.4.0'
+      '@langchain/core': '>=0.3.29 <0.4.0'
 
   '@langchain/textsplitters@0.1.0':
     resolution: {integrity: sha512-djI4uw9rlkAb5iMhtLED+xJebDdAG935AdP4eRTB02R7OB/act55Bj9wsskhZsvuyQRpO4O1wQOp85s6T6GWmw==}
@@ -1131,7 +1140,7 @@ packages:
     resolution: {integrity: sha512-4Olc63RY+MKvxMwVknCUDhRQX1pFQoBZ/lXcRLP69PQkEpze/0cr8LNqJQe5NFb/b19DWi2a5bTi2VAlQzhJuA==}
 
   '@types/koa-session@6.4.5':
-    resolution: {integrity: sha512-Vc6+fslnPuMH2v9y80WYeo39UMo8mweuNNthKCwYU2ZE6l5vnRrzRU3BRvexKwsoI5sxsRl5CxDsBlLI8kY/XA==, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/@types/koa-session/-/koa-session-6.4.5.tgz}
+    resolution: {integrity: sha512-Vc6+fslnPuMH2v9y80WYeo39UMo8mweuNNthKCwYU2ZE6l5vnRrzRU3BRvexKwsoI5sxsRl5CxDsBlLI8kY/XA==}
 
   '@types/koa@2.15.0':
     resolution: {integrity: sha512-7QFsywoE5URbuVnG3loe03QXuGajrnotr3gQkXcEBShORai23MePfFYdhz90FEtBBpkyIYQbVD+evKtloCgX3g==}
@@ -1157,8 +1166,14 @@ packages:
   '@types/minimist@1.2.5':
     resolution: {integrity: sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==}
 
+  '@types/node-fetch@2.6.13':
+    resolution: {integrity: sha512-QGpRVpzSaUs30JBSGPjOg4Uveu384erbHBoT1zeONvyCfwQxIkUshLAOqN/k9EjGviPRmWTTe6aH2qySWKTVSw==, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/@types/node-fetch/-/node-fetch-2.6.13.tgz}
+
   '@types/node-zookeeper-client@1.1.0':
-    resolution: {integrity: sha512-rnYaOk7Y02rUEwNLpZsrSf5DqAtzJpmDbNufG9NG47JH12GqZ9fK9SPaDMifrZSK61jVn+7dpw5XQP4zSqEQfQ==, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/@types/node-zookeeper-client/-/node-zookeeper-client-1.1.0.tgz}
+    resolution: {integrity: sha512-rnYaOk7Y02rUEwNLpZsrSf5DqAtzJpmDbNufG9NG47JH12GqZ9fK9SPaDMifrZSK61jVn+7dpw5XQP4zSqEQfQ==}
+
+  '@types/node@18.19.130':
+    resolution: {integrity: sha512-GRaXQx6jGfL8sKfaIDD6OupbIHBr9jv7Jnaml9tB7l4v068PAOXqfcujMMo5PhbIs6ggR1XODELqahT2R8v0fg==, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/@types/node/-/node-18.19.130.tgz}
 
   '@types/node@20.19.9':
     resolution: {integrity: sha512-cuVNgarYWZqxRJDQHEB58GEONhOK79QVR/qYx4S7kcUObQvUwvFnYxJuuHUKm2aieN9X3yZB4LZsuYNU1Qphsw==}
@@ -1335,6 +1350,10 @@ packages:
     resolution: {integrity: sha512-6/mh1E2u2YgEsCHdY0Yx5oW+61gZU+1vXaoiHHrpKeuRNNgFvS+/jrwHiQhB5apAf5oB7UB7E19ol2R2LKH8hQ==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
 
+  abort-controller@3.0.0:
+    resolution: {integrity: sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg==, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/abort-controller/-/abort-controller-3.0.0.tgz}
+    engines: {node: '>=6.5'}
+
   accepts@1.3.8:
     resolution: {integrity: sha512-PYAthTa2m2VKxuvSD3DPC/Gy+U+sOA1LAuT8mkmRuvw+NACSaeXEQ+NHcVF7rONl6qcaxV3Uuemwawk+7+SJLw==}
     engines: {node: '>= 0.6'}
@@ -1359,6 +1378,10 @@ packages:
   agent-base@7.1.4:
     resolution: {integrity: sha512-MnA+YT8fwfJPgBx3m60MNqakm30XOkyIoH1y6huTQvC0PwZG7ki8NacLBcrPbNoo8vEZy7Jpuk7+jMO+CUovTQ==}
     engines: {node: '>= 14'}
+
+  agentkeepalive@4.6.0:
+    resolution: {integrity: sha512-kja8j7PjmncONqaTsB8fQ+wE2mSU2DJ9D4XKoJ5PFWIdRMa6SLSN1ff4mOr4jCbfRSsxR4keIiySJU0N9T5hIQ==, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/agentkeepalive/-/agentkeepalive-4.6.0.tgz}
+    engines: {node: '>= 8.0.0'}
 
   aggregate-error@3.1.0:
     resolution: {integrity: sha1-kmcP9Q9TWb23o+DUDQ7DDFc3aHo=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/aggregate-error/aggregate-error-3.1.0.tgz}
@@ -1399,7 +1422,7 @@ packages:
     engines: {node: '>=8'}
 
   ansi-styles@5.2.0:
-    resolution: {integrity: sha512-Cxwpt2SfTzTtXcfOlzGEee8O+c+MmUgGrNiBcXnuWxuFJHe6a5Hz7qwhwe5OgaSYI0IJvkLqWX1ASG+cJOkEiA==}
+    resolution: {integrity: sha512-Cxwpt2SfTzTtXcfOlzGEee8O+c+MmUgGrNiBcXnuWxuFJHe6a5Hz7qwhwe5OgaSYI0IJvkLqWX1ASG+cJOkEiA==, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/ansi-styles/-/ansi-styles-5.2.0.tgz}
     engines: {node: '>=10'}
 
   ansi-styles@6.2.1:
@@ -1451,7 +1474,7 @@ packages:
     resolution: {integrity: sha512-7HhHjtERjqlNbZtqNqy2rckN/SpOOlmDliet+lP7k+eKZEjPk3DgyeU9lIXLdeLz0uBbbVp+9Qdow9wJWgwwfg==}
 
   async@0.2.10:
-    resolution: {integrity: sha1-trvgsGdLnXGXCMo43owjfLUmw9E=, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/async/async-0.2.10.tgz}
+    resolution: {integrity: sha1-trvgsGdLnXGXCMo43owjfLUmw9E=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/async/async-0.2.10.tgz}
 
   async@3.2.6:
     resolution: {integrity: sha512-htCUDlxyyCLMgaM3xXg0C0LW2xqfuQ6p05pCEIsXuyQ+a1koYKTuBMzRNwmybfLgvJDMd0r1LTn4+E0Ti6C2AA==}
@@ -1471,6 +1494,10 @@ packages:
 
   balanced-match@1.0.2:
     resolution: {integrity: sha1-6D46fj8wCzTLnYf2FfoMvzV2kO4=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/balanced-match/balanced-match-1.0.2.tgz}
+
+  base64-arraybuffer@1.0.2:
+    resolution: {integrity: sha512-I3yl4r9QB5ZRY3XuJVEPfc2XhZO6YweFPI+UovAzn+8/hb3oJ6lnysaFcjVpkCPfVWFUDvoZ8kmVDP7WyRtYtQ==}
+    engines: {node: '>= 0.6.0'}
 
   base64-js@1.5.1:
     resolution: {integrity: sha1-GxtEAWClv3rUC2UPCVljSBkDkwo=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/base64-js/base64-js-1.5.1.tgz}
@@ -1524,7 +1551,7 @@ packages:
     engines: {node: '>=12.17'}
 
   byte@1.4.1:
-    resolution: {integrity: sha1-qAVT0qrlOxhWq1T6d0PgOiDcyUQ=, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/byte/byte-1.4.1.tgz}
+    resolution: {integrity: sha1-qAVT0qrlOxhWq1T6d0PgOiDcyUQ=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/byte/byte-1.4.1.tgz}
     engines: {node: '>= 0.10.0'}
 
   bytes@3.1.2:
@@ -1760,7 +1787,7 @@ packages:
         optional: true
 
   crc@3.8.0:
-    resolution: {integrity: sha1-rWAmnCyFb4wpnixMwN5FVpFAVsY=, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/crc/crc-3.8.0.tgz}
+    resolution: {integrity: sha1-rWAmnCyFb4wpnixMwN5FVpFAVsY=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/crc/crc-3.8.0.tgz}
 
   create-require@1.1.1:
     resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==}
@@ -1768,6 +1795,9 @@ packages:
   cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
+
+  css-line-break@2.1.0:
+    resolution: {integrity: sha512-FHcKFCZcAha3LwfVBhCQbW2nCNbkZXn7KVUJcsT5/P8YmfsVja0FMPJr0B903j/E69HUphKiV9iQArX8SDYA4w==}
 
   cssesc@3.0.0:
     resolution: {integrity: sha1-N3QZGZA7hoVl4cCep0dEXNGJg+4=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/cssesc/cssesc-3.0.0.tgz}
@@ -1791,7 +1821,7 @@ packages:
     resolution: {integrity: sha1-sgOOhG3DO6pXlhKNCAS0VbjB4h0=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/de-indent/de-indent-1.0.2.tgz}
 
   debug@2.6.9:
-    resolution: {integrity: sha1-XRKFFd8TT/Mn6QpMk/Tgd6U2NB8=, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/debug/debug-2.6.9.tgz}
+    resolution: {integrity: sha1-XRKFFd8TT/Mn6QpMk/Tgd6U2NB8=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/debug/debug-2.6.9.tgz}
     peerDependencies:
       supports-color: '*'
     peerDependenciesMeta:
@@ -1799,7 +1829,7 @@ packages:
         optional: true
 
   debug@3.1.0:
-    resolution: {integrity: sha1-W7WgZyYotkFJVmuhaBnmFRjGcmE=, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/debug/debug-3.1.0.tgz}
+    resolution: {integrity: sha1-W7WgZyYotkFJVmuhaBnmFRjGcmE=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/debug/debug-3.1.0.tgz}
     peerDependencies:
       supports-color: '*'
     peerDependenciesMeta:
@@ -1820,7 +1850,7 @@ packages:
     engines: {node: '>=0.10.0'}
 
   decamelize@1.2.0:
-    resolution: {integrity: sha1-9lNNFRSCabIDUue+4m9QH5oZEpA=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/decamelize/decamelize-1.2.0.tgz}
+    resolution: {integrity: sha1-9lNNFRSCabIDUue+4m9QH5oZEpA=, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/decamelize/decamelize-1.2.0.tgz}
     engines: {node: '>=0.10.0'}
 
   dedent@1.5.3:
@@ -1909,7 +1939,7 @@ packages:
     engines: {node: '>=12'}
 
   dubbo2.js@2.3.9:
-    resolution: {integrity: sha512-ORwJ1PWtfjz58Z/548kHoeDMGLCYbQFCjW5KRq9dGMTqieUDoOMbGAqavbIQ38W7mt/LUYWC1mOF/yo7/3LBmw==, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/dubbo2.js/-/dubbo2.js-2.3.9.tgz}
+    resolution: {integrity: sha512-ORwJ1PWtfjz58Z/548kHoeDMGLCYbQFCjW5KRq9dGMTqieUDoOMbGAqavbIQ38W7mt/LUYWC1mOF/yo7/3LBmw==}
     engines: {node: '>=6.0.0'}
 
   dunder-proto@1.0.1:
@@ -2063,6 +2093,10 @@ packages:
     resolution: {integrity: sha1-dNLrTeC42hKTcRkQ1Qd1ubcQ72Q=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/esutils/esutils-2.0.3.tgz}
     engines: {node: '>=0.10.0'}
 
+  event-target-shim@5.0.1:
+    resolution: {integrity: sha512-i/2XbnSz/uxRCU6+NdVJgKWDTM427+MqYbkQzD321DuCQJUqOuJKIA0IM2+W2xtYHdKOmZ4dR6fExsd4SXL+WQ==, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/event-target-shim/-/event-target-shim-5.0.1.tgz}
+    engines: {node: '>=6'}
+
   eventemitter3@4.0.7:
     resolution: {integrity: sha1-Lem2j2Uo1WRO9cWVJqG0oHMGFp8=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/eventemitter3/eventemitter3-4.0.7.tgz}
 
@@ -2074,7 +2108,7 @@ packages:
     resolution: {integrity: sha512-8QxYTVXUkuy7fIIoitQkPwGonB8F3Zj8eEO8Sqg9Zv/bkI7RJAzowee4gr81Hak/dUTpA2Z7VfQgoijjPNlUZA==}
 
   extend-shallow@2.0.1:
-    resolution: {integrity: sha1-Ua99YUrZqfYQ6huvu5idaxxWiQ8=, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/extend-shallow/extend-shallow-2.0.1.tgz}
+    resolution: {integrity: sha1-Ua99YUrZqfYQ6huvu5idaxxWiQ8=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/extend-shallow/extend-shallow-2.0.1.tgz}
     engines: {node: '>=0.10.0'}
 
   external-editor@3.1.0:
@@ -2160,9 +2194,16 @@ packages:
     resolution: {integrity: sha512-gIXjKqtFuWEgzFRJA9WCQeSJLZDjgJUOMCMzxtvFq/37KojM1BFGufqsCy0r4qSQmYLsZYMeyRqzIWOMup03sw==}
     engines: {node: '>=14'}
 
+  form-data-encoder@1.7.2:
+    resolution: {integrity: sha512-qfqtYan3rxrnCk1VYaA4H+Ms9xdpPqvLZa6xmMgFvhO32x7/3J/ExcTd6qpxM0vH2GdMI+poehyBZvqfMTto8A==, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/form-data-encoder/-/form-data-encoder-1.7.2.tgz}
+
   form-data@4.0.4:
     resolution: {integrity: sha512-KrGhL9Q4zjj0kiUt5OO4Mr/A/jlI2jDYs5eHBpYHPcBEVSiipAvn2Ko2HnPe20rmcuuvMHNdZFp+4IlGTMF0Ow==}
     engines: {node: '>= 6'}
+
+  formdata-node@4.4.1:
+    resolution: {integrity: sha512-0iirZp3uVDjVGt9p49aTaqjk84TrglENEDuqfdlZQ1roC9CWlPk6Avf8EEnZNcAqPonwkG35x4n3ww/1THYAeQ==, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/formdata-node/-/formdata-node-4.4.1.tgz}
+    engines: {node: '>= 12.20'}
 
   formdata-polyfill@4.0.10:
     resolution: {integrity: sha512-buewHzMvYL29jdeQTVILecSaZKnt/RJWjoZCF5OW60Z67/GmSLBkOFM7qh1PI3zFNtJbaZL5eQu1vLfazOwj4g==}
@@ -2329,7 +2370,7 @@ packages:
     engines: {node: '>=16.0.0'}
 
   hessian.js@2.5.0:
-    resolution: {integrity: sha512-CaJ6ZHLDru7U32p1oapswfk2HJemAKXw1itK8ZsrRkvQvy0ZsBtv/1tMD3BYWOtYxil3dn9xG/TTAUY02Y8EDQ==, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/hessian.js/-/hessian.js-2.5.0.tgz}
+    resolution: {integrity: sha512-CaJ6ZHLDru7U32p1oapswfk2HJemAKXw1itK8ZsrRkvQvy0ZsBtv/1tMD3BYWOtYxil3dn9xG/TTAUY02Y8EDQ==}
     engines: {node: '>= 0.12.0'}
 
   hosted-git-info@2.8.9:
@@ -2342,6 +2383,10 @@ packages:
   hosted-git-info@7.0.2:
     resolution: {integrity: sha512-puUZAUKT5m8Zzvs72XWy3HtvVbTWljRE66cP60bxJzAqf2DgICo7lYTY2IHUmLnNpjYvw5bvmoHvPc0QO2a62w==}
     engines: {node: ^16.14.0 || >=18.0.0}
+
+  html2canvas@1.4.1:
+    resolution: {integrity: sha512-fPU6BHNpsyIhr8yyMpTLLxAbkaK8ArIBcmZIRiBLiDhjeqvXolaEmDGmELFuX9I4xDcaKKcJl+TKZLqruBbmWA==}
+    engines: {node: '>=8.0.0'}
 
   http-assert@1.5.0:
     resolution: {integrity: sha512-uPpH7OKX4H25hBmU6G1jWNaqJGpTXxey+YOUizJUAgu0AjLUeC8D73hTrhvDS5D+GJN1DN1+hhc/eF/wpxtp0w==}
@@ -2369,6 +2414,9 @@ packages:
   human-signals@2.1.0:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
     engines: {node: '>=10.17.0'}
+
+  humanize-ms@1.2.1:
+    resolution: {integrity: sha1-xG4xWaKT9riW2ikxbYtv6Lt5u+0=, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/humanize-ms/humanize-ms-1.2.1.tgz}
 
   iconv-lite@0.4.24:
     resolution: {integrity: sha1-ICK0sl+93CHS9SSXSkdKr+czkIs=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/iconv-lite/iconv-lite-0.4.24.tgz}
@@ -2436,7 +2484,7 @@ packages:
     engines: {node: '>= 12'}
 
   ip@1.1.5:
-    resolution: {integrity: sha1-vd7XARQpCCjAoDnnLvJfWq7ENUo=, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/ip/ip-1.1.5.tgz}
+    resolution: {integrity: sha1-vd7XARQpCCjAoDnnLvJfWq7ENUo=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/ip/ip-1.1.5.tgz}
 
   is-arrayish@0.2.1:
     resolution: {integrity: sha1-d8mYQFJ6qOyxqLppe4BkWnqSap0=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/is-arrayish/is-arrayish-0.2.1.tgz}
@@ -2450,7 +2498,7 @@ packages:
     hasBin: true
 
   is-class-hotfix@0.0.6:
-    resolution: {integrity: sha1-pSfTH7IyeSgd3l84XHe13nCnJDU=, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/is-class-hotfix/is-class-hotfix-0.0.6.tgz}
+    resolution: {integrity: sha1-pSfTH7IyeSgd3l84XHe13nCnJDU=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/is-class-hotfix/is-class-hotfix-0.0.6.tgz}
 
   is-core-module@2.16.1:
     resolution: {integrity: sha512-UfoeMA6fIJ8wTYFEUjelnaGI67v6+N7qXJEvQuIGa99l4xsCruSYOVSQ0uPANn4dAzm8lkYPaKLrrijLq7x23w==}
@@ -2462,7 +2510,7 @@ packages:
     hasBin: true
 
   is-extendable@0.1.1:
-    resolution: {integrity: sha1-YrEQ4omkcUGOPsNqYX1HLjAd/Ik=, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/is-extendable/is-extendable-0.1.1.tgz}
+    resolution: {integrity: sha1-YrEQ4omkcUGOPsNqYX1HLjAd/Ik=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/is-extendable/is-extendable-0.1.1.tgz}
     engines: {node: '>=0.10.0'}
 
   is-extglob@2.1.1:
@@ -2528,10 +2576,10 @@ packages:
     engines: {node: '>=0.10.0'}
 
   is-type-of@1.4.0:
-    resolution: {integrity: sha512-EddYllaovi5ysMLMEN7yzHEKh8A850cZ7pykrY1aNRQGn/CDjRDE9qEWbIdt7xGEVJmjBXzU/fNnC4ABTm8tEQ==, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/is-type-of/-/is-type-of-1.4.0.tgz}
+    resolution: {integrity: sha512-EddYllaovi5ysMLMEN7yzHEKh8A850cZ7pykrY1aNRQGn/CDjRDE9qEWbIdt7xGEVJmjBXzU/fNnC4ABTm8tEQ==}
 
   is-type-of@2.2.0:
-    resolution: {integrity: sha512-72axShMJMnMy5HSU/jLGNOonZD5rWM0MwJSCYpKCTQCbggQZBJO/CLMMVP5HgS8kPSYFBkTysJexsD6NMvGKDQ==, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/is-type-of/-/is-type-of-2.2.0.tgz}
+    resolution: {integrity: sha512-72axShMJMnMy5HSU/jLGNOonZD5rWM0MwJSCYpKCTQCbggQZBJO/CLMMVP5HgS8kPSYFBkTysJexsD6NMvGKDQ==}
 
   is-unicode-supported@0.1.0:
     resolution: {integrity: sha1-PybHaoCVk7Ur+i7LVxDtJ3m1Iqc=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/is-unicode-supported/is-unicode-supported-0.1.0.tgz}
@@ -2560,7 +2608,7 @@ packages:
     engines: {node: '>=0.10.0'}
 
   isstream@0.1.2:
-    resolution: {integrity: sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo=, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/isstream/isstream-0.1.2.tgz}
+    resolution: {integrity: sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/isstream/isstream-0.1.2.tgz}
 
   jackspeak@3.4.3:
     resolution: {integrity: sha512-OGlZQpz2yfahA/Rd1Y8Cd9SIEsqvXkLVoSw/cgwhnhFMDbsQFeZYoJJ7bIZBS9BcamUW96asq/npPWugM+RQBw==}
@@ -2586,7 +2634,7 @@ packages:
     resolution: {integrity: sha512-Xlaqhhs8VfCd6Sh7a1cFkZHQbYTLCwVJJWiHVxBYzLPxW0XsoxBy1hitmjkdIjD3Aon5BXLHFwU5O8WUx6HH+A==}
 
   js-to-java@2.4.0:
-    resolution: {integrity: sha512-IBXaXN1XhE5F7Ma6xgyb3wbNP2U6QDNxXmrh/8YMRDsw9gzseVfYR8IpYZD6jVZ+ZsY2t/wTXxbolGxiPj3TRg==, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/js-to-java/-/js-to-java-2.4.0.tgz}
+    resolution: {integrity: sha512-IBXaXN1XhE5F7Ma6xgyb3wbNP2U6QDNxXmrh/8YMRDsw9gzseVfYR8IpYZD6jVZ+ZsY2t/wTXxbolGxiPj3TRg==}
 
   js-tokens@4.0.0:
     resolution: {integrity: sha1-GSA/tZmR35jjoocFDUZHzerzJJk=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/js-tokens/js-tokens-4.0.0.tgz}
@@ -2678,7 +2726,7 @@ packages:
     engines: {node: '>=8.0.0'}
 
   koa-compose@4.0.0:
-    resolution: {integrity: sha1-KAClE9nDYe8NY4UrA45Pby1adzw=, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/koa-compose/koa-compose-4.0.0.tgz}
+    resolution: {integrity: sha1-KAClE9nDYe8NY4UrA45Pby1adzw=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/koa-compose/koa-compose-4.0.0.tgz}
 
   koa-compose@4.1.0:
     resolution: {integrity: sha1-UHMGuTcZAdtBEhyBLpI9DWfT6Hc=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/koa-compose/koa-compose-4.1.0.tgz}
@@ -2694,7 +2742,7 @@ packages:
       helmet: '>= 6'
 
   koa-session@7.0.2:
-    resolution: {integrity: sha512-nMWJndLmIuKQMTYPr5NokGQOGD2Aqal5GVi1xAhrQjrrzKq1ASy1WTFVkZ/xhwhtC4KpWi5KdqNYewZo7KJb4w==, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/koa-session/-/koa-session-7.0.2.tgz}
+    resolution: {integrity: sha512-nMWJndLmIuKQMTYPr5NokGQOGD2Aqal5GVi1xAhrQjrrzKq1ASy1WTFVkZ/xhwhtC4KpWi5KdqNYewZo7KJb4w==}
     engines: {node: '>= 18.19.0'}
 
   koa@2.16.2:
@@ -2873,7 +2921,7 @@ packages:
     engines: {node: '>=12'}
 
   long@3.2.0:
-    resolution: {integrity: sha1-2CG3E4yhy1gcFymQ7xTbIAtcR0s=, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/long/long-3.2.0.tgz}
+    resolution: {integrity: sha1-2CG3E4yhy1gcFymQ7xTbIAtcR0s=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/long/long-3.2.0.tgz}
     engines: {node: '>=0.6'}
 
   lru-cache@10.4.3:
@@ -3025,7 +3073,7 @@ packages:
     engines: {node: '>= 8'}
 
   mkdirp@0.5.6:
-    resolution: {integrity: sha512-FP+p8RB8OWpF3YZBCrP5gtADmtXApB5AMLn+vdyA+PyxCjrCs00mjyUozssO33cwDeT3wNGdLxJ5M//YqtHAJw==, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/mkdirp/-/mkdirp-0.5.6.tgz}
+    resolution: {integrity: sha512-FP+p8RB8OWpF3YZBCrP5gtADmtXApB5AMLn+vdyA+PyxCjrCs00mjyUozssO33cwDeT3wNGdLxJ5M//YqtHAJw==}
     hasBin: true
 
   mkdirp@1.0.4:
@@ -3038,7 +3086,7 @@ packages:
     engines: {node: '>=0.10.0'}
 
   ms@2.0.0:
-    resolution: {integrity: sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/ms/ms-2.0.0.tgz}
+    resolution: {integrity: sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/ms/ms-2.0.0.tgz}
 
   ms@2.1.3:
     resolution: {integrity: sha1-V0yBOM4dK1hh8LRFedut1gxmFbI=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/ms/ms-2.1.3.tgz}
@@ -3109,11 +3157,11 @@ packages:
     resolution: {integrity: sha512-xxOWJsBKtzAq7DY0J+DTzuz58K8e7sJbdgwkbMWQe8UYB6ekmsQ45q0M/tJDsGaZmbC+l7n57UV8Hl5tHxO9uw==}
 
   node-zookeeper-client@0.2.2:
-    resolution: {integrity: sha512-uVIRKYJ86u8atqrUOaOiUW5Cero+TfPqpkL4cPqjaC9YJsU5DN5Gxw0/c+in/aNkup9m7jnfySwaNNgJNXNrJg==, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/node-zookeeper-client/-/node-zookeeper-client-0.2.2.tgz}
+    resolution: {integrity: sha512-uVIRKYJ86u8atqrUOaOiUW5Cero+TfPqpkL4cPqjaC9YJsU5DN5Gxw0/c+in/aNkup9m7jnfySwaNNgJNXNrJg==}
     engines: {node: '>=0.6.0'}
 
   node-zookeeper-client@1.1.3:
-    resolution: {integrity: sha512-S7DWrIpr16E03LSTbiuahcHvE/Aj3AJEh2X7+bL8sx/PoR8YNwUQlVspX1QslkD5Pk9RsC8ZTMN2GapS8IrOYQ==, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/node-zookeeper-client/-/node-zookeeper-client-1.1.3.tgz}
+    resolution: {integrity: sha512-S7DWrIpr16E03LSTbiuahcHvE/Aj3AJEh2X7+bL8sx/PoR8YNwUQlVspX1QslkD5Pk9RsC8ZTMN2GapS8IrOYQ==}
     engines: {node: '>=8.10.0'}
 
   nopt@7.2.1:
@@ -3217,8 +3265,20 @@ packages:
     resolution: {integrity: sha512-7x81NCL719oNbsq/3mh+hVrAWmFuEYUqrq/Iw3kUzH8ReypT9QQ0BLoJS7/G9k6N81XjW4qHWtjWwe/9eLy1EQ==}
     engines: {node: '>=12'}
 
+  openai@4.104.0:
+    resolution: {integrity: sha512-p99EFNsA/yX6UhVO93f5kJsDRLAg+CTA2RBqdHK4RtK8u5IJw32Hyb2dTGKbnnFmnuoBv5r7Z2CURI9sGZpSuA==, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/openai/-/openai-4.104.0.tgz}
+    hasBin: true
+    peerDependencies:
+      ws: ^8.18.0
+      zod: ^3.23.8
+    peerDependenciesMeta:
+      ws:
+        optional: true
+      zod:
+        optional: true
+
   openai@5.10.2:
-    resolution: {integrity: sha512-n+vi74LzHtvlKcDPn9aApgELGiu5CwhaLG40zxLTlFQdoSJCLACORIPC2uVQ3JEYAbqapM+XyRKFy2Thej7bIw==}
+    resolution: {integrity: sha512-n+vi74LzHtvlKcDPn9aApgELGiu5CwhaLG40zxLTlFQdoSJCLACORIPC2uVQ3JEYAbqapM+XyRKFy2Thej7bIw==, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/openai/-/openai-5.10.2.tgz}
     hasBin: true
     peerDependencies:
       ws: ^8.18.0
@@ -3893,6 +3953,9 @@ packages:
     resolution: {integrity: sha1-GFPkX+45yUXOb2w2stZZtaq8KiY=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/text-extensions/text-extensions-1.9.0.tgz}
     engines: {node: '>=0.10'}
 
+  text-segmentation@1.0.3:
+    resolution: {integrity: sha512-iOiPUo/BGnZ6+54OsWxZidGCsdU8YbE4PSpdPinp7DeMtUJNJBoJ/ouUSTJjHkh1KntHaltHl/gDs2FC4i5+Nw==}
+
   text-table@0.2.0:
     resolution: {integrity: sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/text-table/text-table-0.2.0.tgz}
 
@@ -4033,16 +4096,19 @@ packages:
     hasBin: true
 
   underscore@1.13.7:
-    resolution: {integrity: sha512-GMXzWtsc57XAtguZgaQViUOzs0KTkk8ojr3/xAxXLITqf/3EMwxC0inyETfDFjH/Krbhuep0HNbbjI9i/q3F3g==, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/underscore/-/underscore-1.13.7.tgz}
+    resolution: {integrity: sha512-GMXzWtsc57XAtguZgaQViUOzs0KTkk8ojr3/xAxXLITqf/3EMwxC0inyETfDFjH/Krbhuep0HNbbjI9i/q3F3g==}
 
   underscore@1.4.4:
-    resolution: {integrity: sha1-YaajIBBiKvoHljvzJSA88SI51gQ=, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/underscore/underscore-1.4.4.tgz}
+    resolution: {integrity: sha1-YaajIBBiKvoHljvzJSA88SI51gQ=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/underscore/underscore-1.4.4.tgz}
+
+  undici-types@5.26.5:
+    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/undici-types/-/undici-types-5.26.5.tgz}
 
   undici-types@6.21.0:
     resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
 
   unescape@1.0.1:
-    resolution: {integrity: sha1-lW5DD2HK2KTVfYLFGPXmzF0N2pY=, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/unescape/unescape-1.0.1.tgz}
+    resolution: {integrity: sha1-lW5DD2HK2KTVfYLFGPXmzF0N2pY=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/unescape/unescape-1.0.1.tgz}
     engines: {node: '>=0.10.0'}
 
   unique-filename@3.0.0:
@@ -4081,8 +4147,11 @@ packages:
     resolution: {integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/util-deprecate/util-deprecate-1.0.2.tgz}
 
   utility@1.18.0:
-    resolution: {integrity: sha512-PYxZDA+6QtvRvm//++aGdmKG/cI07jNwbROz0Ql+VzFV1+Z0Dy55NI4zZ7RHc9KKpBePNFwoErqIuqQv/cjiTA==, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/utility/-/utility-1.18.0.tgz}
+    resolution: {integrity: sha512-PYxZDA+6QtvRvm//++aGdmKG/cI07jNwbROz0Ql+VzFV1+Z0Dy55NI4zZ7RHc9KKpBePNFwoErqIuqQv/cjiTA==}
     engines: {node: '>= 0.12.0'}
+
+  utrie@1.0.2:
+    resolution: {integrity: sha512-1MLa5ouZiOmQzUbjbu9VmjLzn1QLXBhwpUa7kdLUQK+KQ5KA9I1vk5U4YHe/X2Ch7PYnJfWuWT+VbuxbGwljhw==}
 
   uuid@10.0.0:
     resolution: {integrity: sha512-8XkAphELsDnEGrDxUOHB3RGvXz6TeuYSGEZBOjtTtPm2lwhGBjLgOzLHB63IUWfBpNucQjND6d3AOudO+H3RWQ==}
@@ -4175,6 +4244,10 @@ packages:
   web-streams-polyfill@3.3.3:
     resolution: {integrity: sha512-d2JWLCivmZYTSIoge9MsgFCZrt571BikcWGYkjC1khllbTeDlGqZ2D8vD8E/lJa8WGWbb7Plm8/XJYV7IJHZZw==}
     engines: {node: '>= 8'}
+
+  web-streams-polyfill@4.0.0-beta.3:
+    resolution: {integrity: sha512-QW95TCTaHmsYfHDybGMwO5IJIM93I/6vTRk+daHTWFPhwh+C8Cg7j7XyKrwrj8Ib6vYXe0ocYNrmzY4xAAN6ug==, tarball: https://depend.iflytek.com:443/artifactory/api/npm/npm-repo/web-streams-polyfill/-/web-streams-polyfill-4.0.0-beta.3.tgz}
+    engines: {node: '>= 14'}
 
   webidl-conversions@3.0.1:
     resolution: {integrity: sha1-JFNCdeKnvGvnvIZhHMFq4KVlSHE=, tarball: https://depend.iflytek.com/artifactory/api/npm/npm-repo/webidl-conversions/webidl-conversions-3.0.1.tgz}
@@ -4655,13 +4728,15 @@ snapshots:
       - '@opentelemetry/sdk-trace-base'
       - openai
 
-  '@langchain/openai@0.6.3(@langchain/core@0.3.66(openai@5.10.2(ws@8.18.3)(zod@3.25.76)))(ws@8.18.3)':
+  '@langchain/openai@0.3.17(@langchain/core@0.3.66(openai@5.10.2(ws@8.18.3)(zod@3.25.76)))(encoding@0.1.13)(ws@8.18.3)':
     dependencies:
       '@langchain/core': 0.3.66(openai@5.10.2(ws@8.18.3)(zod@3.25.76))
       js-tiktoken: 1.0.20
-      openai: 5.10.2(ws@8.18.3)(zod@3.25.76)
+      openai: 4.104.0(encoding@0.1.13)(ws@8.18.3)(zod@3.25.76)
       zod: 3.25.76
+      zod-to-json-schema: 3.24.6(zod@3.25.76)
     transitivePeerDependencies:
+      - encoding
       - ws
 
   '@langchain/textsplitters@0.1.0(@langchain/core@0.3.66(openai@5.10.2(ws@8.18.3)(zod@3.25.76)))':
@@ -5210,9 +5285,18 @@ snapshots:
 
   '@types/minimist@1.2.5': {}
 
+  '@types/node-fetch@2.6.13':
+    dependencies:
+      '@types/node': 20.19.9
+      form-data: 4.0.4
+
   '@types/node-zookeeper-client@1.1.0':
     dependencies:
       '@types/node': 20.19.9
+
+  '@types/node@18.19.130':
+    dependencies:
+      undici-types: 5.26.5
 
   '@types/node@20.19.9':
     dependencies:
@@ -5456,6 +5540,10 @@ snapshots:
 
   abbrev@2.0.0: {}
 
+  abort-controller@3.0.0:
+    dependencies:
+      event-target-shim: 5.0.1
+
   accepts@1.3.8:
     dependencies:
       mime-types: 2.1.35
@@ -5474,6 +5562,10 @@ snapshots:
   add-stream@1.0.0: {}
 
   agent-base@7.1.4: {}
+
+  agentkeepalive@4.6.0:
+    dependencies:
+      humanize-ms: 1.2.1
 
   aggregate-error@3.1.0:
     dependencies:
@@ -5581,6 +5673,8 @@ snapshots:
       - debug
 
   balanced-match@1.0.2: {}
+
+  base64-arraybuffer@1.0.2: {}
 
   base64-js@1.5.1: {}
 
@@ -5912,6 +6006,10 @@ snapshots:
       shebang-command: 2.0.0
       which: 2.0.2
 
+  css-line-break@2.1.0:
+    dependencies:
+      utrie: 1.0.2
+
   cssesc@3.0.0: {}
 
   csstype@3.1.3: {}
@@ -6232,6 +6330,8 @@ snapshots:
 
   esutils@2.0.3: {}
 
+  event-target-shim@5.0.1: {}
+
   eventemitter3@4.0.7: {}
 
   execa@5.0.0:
@@ -6332,6 +6432,8 @@ snapshots:
       cross-spawn: 7.0.6
       signal-exit: 4.1.0
 
+  form-data-encoder@1.7.2: {}
+
   form-data@4.0.4:
     dependencies:
       asynckit: 0.4.0
@@ -6339,6 +6441,11 @@ snapshots:
       es-set-tostringtag: 2.1.0
       hasown: 2.0.2
       mime-types: 2.1.35
+
+  formdata-node@4.4.1:
+    dependencies:
+      node-domexception: 1.0.0
+      web-streams-polyfill: 4.0.0-beta.3
 
   formdata-polyfill@4.0.10:
     dependencies:
@@ -6540,6 +6647,11 @@ snapshots:
     dependencies:
       lru-cache: 10.4.3
 
+  html2canvas@1.4.1:
+    dependencies:
+      css-line-break: 2.1.0
+      text-segmentation: 1.0.3
+
   http-assert@1.5.0:
     dependencies:
       deep-equal: 1.0.1
@@ -6578,6 +6690,10 @@ snapshots:
       - supports-color
 
   human-signals@2.1.0: {}
+
+  humanize-ms@1.2.1:
+    dependencies:
+      ms: 2.1.3
 
   iconv-lite@0.4.24:
     dependencies:
@@ -6920,10 +7036,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  langchain@0.3.30(@langchain/core@0.3.66(openai@5.10.2(ws@8.18.3)(zod@3.25.76)))(axios@1.11.0)(handlebars@4.7.8)(openai@5.10.2(ws@8.18.3)(zod@3.25.76))(ws@8.18.3):
+  langchain@0.3.30(@langchain/core@0.3.66(openai@5.10.2(ws@8.18.3)(zod@3.25.76)))(axios@1.11.0)(encoding@0.1.13)(handlebars@4.7.8)(openai@5.10.2(ws@8.18.3)(zod@3.25.76))(ws@8.18.3):
     dependencies:
       '@langchain/core': 0.3.66(openai@5.10.2(ws@8.18.3)(zod@3.25.76))
-      '@langchain/openai': 0.6.3(@langchain/core@0.3.66(openai@5.10.2(ws@8.18.3)(zod@3.25.76)))(ws@8.18.3)
+      '@langchain/openai': 0.3.17(@langchain/core@0.3.66(openai@5.10.2(ws@8.18.3)(zod@3.25.76)))(encoding@0.1.13)(ws@8.18.3)
       '@langchain/textsplitters': 0.1.0(@langchain/core@0.3.66(openai@5.10.2(ws@8.18.3)(zod@3.25.76)))
       js-tiktoken: 1.0.20
       js-yaml: 4.1.0
@@ -6941,6 +7057,7 @@ snapshots:
       - '@opentelemetry/api'
       - '@opentelemetry/exporter-trace-otlp-proto'
       - '@opentelemetry/sdk-trace-base'
+      - encoding
       - openai
       - ws
 
@@ -7531,10 +7648,26 @@ snapshots:
       is-docker: 2.2.1
       is-wsl: 2.2.0
 
+  openai@4.104.0(encoding@0.1.13)(ws@8.18.3)(zod@3.25.76):
+    dependencies:
+      '@types/node': 18.19.130
+      '@types/node-fetch': 2.6.13
+      abort-controller: 3.0.0
+      agentkeepalive: 4.6.0
+      form-data-encoder: 1.7.2
+      formdata-node: 4.4.1
+      node-fetch: 2.6.7(encoding@0.1.13)
+    optionalDependencies:
+      ws: 8.18.3
+      zod: 3.25.76
+    transitivePeerDependencies:
+      - encoding
+
   openai@5.10.2(ws@8.18.3)(zod@3.25.76):
     optionalDependencies:
       ws: 8.18.3
       zod: 3.25.76
+    optional: true
 
   openapi-types@12.1.3: {}
 
@@ -8240,6 +8373,10 @@ snapshots:
 
   text-extensions@1.9.0: {}
 
+  text-segmentation@1.0.3:
+    dependencies:
+      utrie: 1.0.2
+
   text-table@0.2.0: {}
 
   thenify-all@1.6.0:
@@ -8363,6 +8500,8 @@ snapshots:
 
   underscore@1.4.4: {}
 
+  undici-types@5.26.5: {}
+
   undici-types@6.21.0: {}
 
   unescape@1.0.1:
@@ -8404,6 +8543,10 @@ snapshots:
       mkdirp: 0.5.6
       mz: 2.7.0
       unescape: 1.0.1
+
+  utrie@1.0.2:
+    dependencies:
+      base64-arraybuffer: 1.0.2
 
   uuid@10.0.0: {}
 
@@ -8465,6 +8608,8 @@ snapshots:
       defaults: 1.0.4
 
   web-streams-polyfill@3.3.3: {}
+
+  web-streams-polyfill@4.0.0-beta.3: {}
 
   webidl-conversions@3.0.1: {}
 

@@ -43,6 +43,11 @@ const router = createRouter({
       name: "home",
       component: () => import("@/views/Main.vue"),
     },
+    {
+      path: "/canvas-transform",
+      name: "canvas-transform",
+      component: () => import("@/views/CanvasTransform.vue"),
+    },
   ],
 });
 
